@@ -225,7 +225,7 @@ training_args.train_datapath = 'wikitext-103-raw/wiki.train.raw'
 
 # Choose GPU
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1" #"0"
 
 
 # ### Put it all together
