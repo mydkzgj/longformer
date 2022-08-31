@@ -104,7 +104,7 @@ def create_long_model(save_model_to, attention_window, max_pos):
         new_pos_embed[k:(k + step)] = model.roberta.embeddings.position_embeddings.weight[2:]
         k += step
     model.roberta.embeddings.position_embeddings.weight.data = new_pos_embed
-    model.roberta.embeddings.position_ids.data = torch.tensor([i for i in range(max_pos)]).reshape(1, max_pos)
+    #model.roberta.embeddings.position_ids.data = torch.tensor([i for i in range(max_pos)]).reshape(1, max_pos)
 
     # replace the `modeling_bert.BertSelfAttention` object with `LongformerSelfAttention`
     config.attention_window = [attention_window] * config.num_hidden_layers
